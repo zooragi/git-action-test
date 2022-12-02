@@ -1,6 +1,6 @@
 #!/bin/sh
 SERVICE_NAME=ties-api
-PATH_TO_JAR=./gitaction-0.0.1.jar
+PATH_TO_JAR=./gitaction-0.0.1-SNAPSHOT.jar
 PID_PATH_NAME=/tmp/$SERVICE_NAME-pid # pid name 
 RUN_MODE=sendbox
 case $1 in
