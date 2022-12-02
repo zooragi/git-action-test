@@ -58,5 +58,6 @@ jobs:
         password: ${{ secrets.NCLOUD_PASSWORD }}
         script_stop: true
         script: |
-          chmod +x /opt/ties/service.sh && sh /opt/ties/service.sh stop
-          sh /opt/ties/service.sh start
+          chmod +x /opt/ties/service.sh
+          cd /opt/ties && ./service.sh stop
+          cd /opt/ties && ./service.sh start
