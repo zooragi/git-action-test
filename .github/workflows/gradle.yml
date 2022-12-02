@@ -41,7 +41,6 @@ jobs:
         host: ${{ secrets.NCLOUD_HOST }}
         username: ${{ secrets.NCLOUD_USER }}
         password: ${{ secrets.NCLOUD_PASSWORD }}
-        port: ${{ secrets.NCLOUT_PORT }}
         # script_stop: true
         script: |
           whoami
