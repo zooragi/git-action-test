@@ -43,6 +43,6 @@ jobs:
         password: ${{ secrets.NCLOUD_PASSWORD }}
         # script_stop: true
         script: |
-          whoami
+          ls -al
           cd /opt/ties
           ls -al
