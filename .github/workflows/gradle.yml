@@ -32,8 +32,6 @@ jobs:
       uses: gradle/gradle-build-action@v2.3.3
       with:
         arguments: build
-    - name: ls
-      run: ls -al
     - name: Deploy Prod use SCP
       uses: appleboy/scp-action@master
       with:
@@ -58,7 +56,7 @@ jobs:
         host: ${{ secrets.NCLOUD_HOST }}
         username: ${{ secrets.NCLOUD_USER }}
         password: ${{ secrets.NCLOUD_PASSWORD }}
-        # script_stop: true
+        script_stop: true
         script: |
           chmod +x /opt/ties/service.sh && sh /opt/ties/service.sh stop
           sh /opt/ties/service.sh start
