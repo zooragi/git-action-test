@@ -61,4 +61,4 @@ jobs:
         script_stop: true
         script: |
           chmod +x /opt/ties/service.sh && sh /opt/ties/service.sh stop
-          chmod +x /opt/ties/service.sh && sh /opt/ties/service.sh start
+          sh /opt/ties/service.sh start
