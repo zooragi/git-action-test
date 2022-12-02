@@ -1,5 +1,5 @@
 #!/bin/sh
-SERVICE_NAME=ties-api
+SERVICE_NAME=ties-main
 PATH_TO_JAR=./gitaction-0.0.1-SNAPSHOT.jar
 PID_PATH_NAME=/tmp/$SERVICE_NAME-pid # pid name 
 RUN_MODE=sendbox
