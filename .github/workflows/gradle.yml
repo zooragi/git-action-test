@@ -54,4 +54,3 @@ jobs:
           ls -al
           cd /opt/ties/build/libs
           ls -al
-          sh servie.sh start
