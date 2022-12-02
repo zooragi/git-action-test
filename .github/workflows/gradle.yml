@@ -33,4 +33,4 @@ jobs:
       with:
         arguments: build
     - name: ls
-      run: ls /build/libs
+      run: ls -al ./build/libs
