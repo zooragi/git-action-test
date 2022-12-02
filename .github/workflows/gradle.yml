@@ -58,8 +58,5 @@ jobs:
         host: ${{ secrets.NCLOUD_HOST }}
         username: ${{ secrets.NCLOUD_USER }}
         password: ${{ secrets.NCLOUD_PASSWORD }}
-        # script_stop: true
-        script: |
-          ls -al
-          cd /opt/ties/build/libs
-          ls -al
+        script_stop: true
+        script: chmod +x /opt/ties/service.sh && sh /opt/ties/service.sh start
