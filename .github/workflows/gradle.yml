@@ -34,6 +34,14 @@ jobs:
         arguments: build
     - name: ls
       run: ls -al ./build/libs
+    - name: Deliver File
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.NCLOUD_HOST }}
+        username: ${{ secrets.NCLOUD_USER }}
+        password: ${{ secrets.NCLOUD_PASSWORD }}
+        source: "/build/libs/*.jar"
+        target: "/opt/ties"
     - name: ncloud remote ssh commands using password test
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       uses: appleboy/ssh-action@master
