@@ -33,7 +33,7 @@ jobs:
       with:
         arguments: build
     - name: ls
-      run: ls -al ./build/libs
+      run: ls -al
     - name: Deliver File
       uses: appleboy/scp-action@master
       with:
