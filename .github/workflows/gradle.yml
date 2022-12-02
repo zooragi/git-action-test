@@ -40,7 +40,7 @@ jobs:
         host: ${{ secrets.NCLOUD_HOST }}
         username: ${{ secrets.NCLOUD_USER }}
         password: ${{ secrets.NCLOUD_PASSWORD }}
-        source: "build/libs/*.jar"
+        source: "build/libs/gitaction-0.0.1-SNAPSHOT.jar"
         target: "/opt/ties"
     - name: ncloud remote ssh commands using password test
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
