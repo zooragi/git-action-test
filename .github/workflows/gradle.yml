@@ -34,3 +34,17 @@ jobs:
         arguments: build
     - name: ls
       run: ls -al ./build/libs
+
+    steps:
+      - name: ncloud remote ssh commands using password test
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.NCLOUD_HOST }}
+          username: ${{ secrets.NCLOUD_USER }}
+          password: ${{ secrets.NCLOUD_PASSWORD }}
+          port: ${{ secrets.NCLOUT_PORT }}
+          # script_stop: true
+          script: |
+            whoami
+            ls -al
